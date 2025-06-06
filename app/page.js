@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Founders from "./components/Founders";
 import Chapters from "./components/Chapters";
 import About from "./components/About";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
     <About/>
     <Founders/>
     <Chapters/>
+    {/* <Footer/> */}
   </div>
   );
 }

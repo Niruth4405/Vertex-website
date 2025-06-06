@@ -1,14 +1,14 @@
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Link } from 'react-scroll';
 
 const navItems = [
   { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Events', href: '/events' },
-  { label: 'Members', href: '/members' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'About', href: 'about' },
+  { label: 'Events', href: 'events' },
+  { label: 'Members', href: 'members' },
+  { label: 'Contact', href: 'contact' },
 ];
 
 export default function Navbar() {
@@ -20,9 +20,12 @@ export default function Navbar() {
         {navItems.map((item) => {
           const isActive = pathname === item.href;
           return (
-            <li key={item.href}>
+            <li key={item.href} className='cursor-pointer'>
               <Link
-                href={item.href}
+                to={item.href}
+                smooth={true}
+                duration={300}
+                offset={-70}
                 className={`px-6 py-2 rounded-full transition-all duration-200
                   ${isActive
                     ? 'bg-white/10 text-white font-semibold shadow-inner border border-white/10'

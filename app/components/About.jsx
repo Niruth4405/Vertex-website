@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <section className="w-full px-6 md:px-20 py-16 text-white">
+    <section id="about" className="w-full px-6 md:px-20 py-16 text-white">
       <div className="max-w-4xl mx-auto space-y-6">
         <h3 className="text-md text-center md:text-left text-lime-400 font-semibold tracking-wide uppercase">
           About Vertex
